@@ -1,0 +1,27 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: appointment-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/medibook_appointment_db
+    username: root
+    password: surbhi123
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
