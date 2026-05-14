@@ -1,0 +1,19 @@
+server:
+  port: 8092
+
+spring:
+  application:
+    name: schedule-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/medibook_schedule?createDatabaseIfNotExist=true
+    username: root
+    password: surbhi123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
